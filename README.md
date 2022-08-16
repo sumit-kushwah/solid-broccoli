@@ -5,4 +5,3 @@ Solutions are available only in `c++` programming language.
 
 Each file named as `problem_name_on_leetcode.cpp`.
 
-***Note: Leetcode is a great platform to improve problem solving skills.***
