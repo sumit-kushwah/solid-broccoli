@@ -1,18 +1,23 @@
-// problem link: 
-
-#include<bits/stdc++.h>
-#include<unordered_map>
+#include <bits/stdc++.h>
+#include <unordered_map>
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-  // write your code here
+  // write your function code here
+  void function() {
 
-
+  }
+  void run()
+  {
+    this->function();
+  }
 };
 
-int main() {
-  Solution s;
-
+int main()
+{
+  Solution *s = new Solution();
+  s->run();
 }
