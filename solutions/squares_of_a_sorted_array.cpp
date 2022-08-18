@@ -7,6 +7,26 @@ class Solution
 {
 public:
   // write your function code here
+
+  vector<int> sortedSquaresImproved(vector<int>& nums) {
+    int left = 0, right = nums.size() - 1;
+    vector<int> ans(nums.size());
+    int curindex = nums.size() - 1;
+    while(left <= right) {
+      if (left == right) {
+        ans[curindex--] = (nums[left] * nums[left]);
+        break;
+      }
+      if (abs(nums[left]) >= abs(nums[right])) {
+        ans[curindex--] = (nums[left] * nums[left]);
+        left++;
+      } else {
+        ans[curindex--] = (nums[right] * nums[right]);
+        right--;
+      }
+    }
+    return ans;
+  }
   vector<int> sortedSquares(vector<int>& nums) {
     int right = nums.size();
     for (int i = 0; i < nums.size(); i++) {
@@ -40,8 +60,8 @@ public:
   }
   void run()
   {
-    vector<int> v = {-7,-3,2,3,11};
-    auto ans = sortedSquares(v);
+    vector<int> v = {-4,-1,0,3,10};
+    auto ans = sortedSquaresImproved(v);
     printAnswer(ans);
   }
 
