@@ -7,19 +7,45 @@ class Solution
 {
 public:
   // write your function code here
-  void rotate(vector<vector<int>>& matrix) {
+
+  void transpose(vector<vector<int>>& matrix) {
     int n = matrix.size();
-    for (int start = 0; start < n / 2; start++) {
-      int col = start;
-      int end = n - 1 - start;
-      while(col < n - start - 1) {
-        swap(matrix[start][col], matrix[col][n - 1 - start]);
-        swap(matrix[start][col], matrix[n - 1 - start][end]);
-        swap(matrix[start][col], matrix[end][start]);
-        col++;
+    for (int i = 0; i < n; i++) {
+      for (int j = i + 1; j < n; j++) {
+        swap(matrix[i][j], matrix[j][i]);
+      }
+    }
+  }
+
+  void reversed(vector<vector<int>>& matrix) {
+    int n = matrix.size();
+    for (int i = 0; i < n; i++) {
+      int start = 0;
+      int end = n - 1;
+      while(start < end) {
+        swap(matrix[i][start], matrix[i][end]);
+        start++;
         end--;
       }
     }
+  }
+
+  void rotate(vector<vector<int>>& matrix) {
+
+    transpose(matrix);
+    reversed(matrix);
+    // int n = matrix.size();
+    // for (int start = 0; start < n / 2; start++) {
+    //   int col = start;
+    //   int end = n - 1 - start;
+    //   while(col < n - start - 1) {
+    //     swap(matrix[start][col], matrix[col][n - 1 - start]);
+    //     swap(matrix[start][col], matrix[n - 1 - start][end]);
+    //     swap(matrix[start][col], matrix[end][start]);
+    //     col++;
+    //     end--;
+    //   }
+    // }
   }
   void run()
   {
