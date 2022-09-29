@@ -31,4 +31,7 @@
 *.out
 *.app
 
+# txt files
+*.txt
+
 .vscode
