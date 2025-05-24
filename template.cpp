@@ -6,16 +6,15 @@ class Solution {
 public:
   // write your code
 
-  void run() {
-    
-  }
+    void run() {
+    }
 };
 
 int main() {
-  freopen("in.txt", "r", stdin);
-  // freopen("out.txt", "w", stdout);
+    freopen("in.txt", "r", stdin);
+    // freopen("out.txt", "w", stdout);
 
-  Solution *s = new Solution();
-  s->run();
-  return 0;
+    Solution *s = new Solution();
+    s->run();
+    return 0;
 }
